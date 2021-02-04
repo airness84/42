@@ -6,7 +6,7 @@
 /*   By: jjocher <jjocher@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/02 11:10:52 by jjocher           #+#    #+#             */
-/*   Updated: 2021/02/03 11:05:24 by jjocher          ###   ########.fr       */
+/*   Updated: 2021/02/04 14:21:15 by jjocher          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,3 +35,5 @@ int	main(void)
 	ft_putchar('\n');
 	return (0);
 }
+
+/* this is all commented, testing git*/ 
