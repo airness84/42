@@ -1,2 +1,2 @@
-# 42_village_18
+#42
 containig codes and projects of our village_18
