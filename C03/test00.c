@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   strncpy_test.c                                     :+:      :+:    :+:   */
+/*   test00.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jjocher <jjocher@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/17 10:10:52 by jjocher           #+#    #+#             */
-/*   Updated: 2021/02/19 22:15:35 by jjocher          ###   ########.fr       */
+/*   Created: 2021/02/18 12:48:16 by jjocher           #+#    #+#             */
+/*   Updated: 2021/02/21 17:35:17 by jjocher          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,22 @@
 #include <stdio.h>
 #include <string.h>
 
-int		main(void)
+int	ft_strcmp(char *s1, char *s2);
+
+int	main(void)
 {
-	char src[] = "14256";
-	char dest[50];
-	unsigned int size;
-	char *r;
-	
-	size = 10;
-	r = 0;
-	r = strncpy(dest, src, size);
-	printf("%s\n", dest);
+	char *s1;
+	char *s2;
+	int own;
+	int built;
+
+	own = 0;
+	built = 0;
+	s1 = "Hallo";
+	s2 = "Hall";
+	own = ft_strcmp(s1, s2);
+	built = strcmp(s1, s2);
+	printf("%i\n", own);
+	printf("%i\n", built);
 	return (0);
 }
