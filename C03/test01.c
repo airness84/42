@@ -6,7 +6,7 @@
 /*   By: jjocher <jjocher@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/18 12:48:16 by jjocher           #+#    #+#             */
-/*   Updated: 2021/02/21 18:18:02 by jjocher          ###   ########.fr       */
+/*   Updated: 2021/02/22 09:56:15 by jjocher          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int	main(void)
 	n = 4;
 	own = 0;
 	built = 0;
-	s1 = "abcd d";
+	s1 = " ";
 	s2 = "abcdf";
 	own = ft_strncmp(s1, s2, n);
 	built = strncmp(s1, s2, n);

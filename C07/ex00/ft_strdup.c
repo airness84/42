@@ -1,39 +1,49 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcapitalize.c                                 :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jjocher <jjocher@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/17 10:10:52 by jjocher           #+#    #+#             */
-/*   Updated: 2021/02/25 15:16:46 by jjocher          ###   ########.fr       */
+/*   Created: 2021/02/24 20:17:57 by jjocher           #+#    #+#             */
+/*   Updated: 2021/02/25 11:28:54 by jjocher          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include <stdlib.h>
 
-char	*ft_strcapitalize(char *str)
+char	*ft_strcpy(char *dest, char *src)
+{
+	int i;
+
+	i = 0;
+	while (src[i] != '\0')
+	{
+		dest[i] = src[i];
+		i++;
+	}
+	dest[i] = src[i];
+	return (dest);
+}
+
+int	ft_strlen(char *str)
 {
 	int i;
 
 	i = 0;
 	while (str[i] != '\0')
 	{
-		if (str[i] > 64 && str[i] < 91)
-		{
-			str[i] = str[i] + 32;
-		}
 		i++;
 	}
-	i = 0;
-	while (str[i] != '\0')
-	{
-		if ((str[i] > 31 && str[i] < 40) || (str[i] > 57 && str[i] < 65)) &&
-		 ((str[i + 1] > 96) && (str[i + 1] < 123))
-		{
-			str[i + 1] = str[i + 1] - 32;
-		}
-		i++;
-	}
-	return (str);
+	return (i);
+}
+
+char	*ft_strdup(char *src)
+
+{
+	char *ptr;
+
+	ptr = malloc(ft_strlen(src) + 1);
+	ft_strcpy(ptr, src);
+	return(ptr);
 }

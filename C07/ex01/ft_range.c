@@ -1,39 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcapitalize.c                                 :+:      :+:    :+:   */
+/*   ft_range.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jjocher <jjocher@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/17 10:10:52 by jjocher           #+#    #+#             */
-/*   Updated: 2021/02/25 15:16:46 by jjocher          ###   ########.fr       */
+/*   Created: 2021/02/25 11:45:18 by jjocher           #+#    #+#             */
+/*   Updated: 2021/02/25 15:25:37 by jjocher          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include <stdlib.h>
 
-char	*ft_strcapitalize(char *str)
+int	*ft_range(int min, int max)
 {
+	int *ptr;
 	int i;
 
 	i = 0;
-	while (str[i] != '\0')
+	ptr = malloc((max - min) * sizeof(int));
+	if (min >= max)
+		return (NULL);
+	while (min < max)
 	{
-		if (str[i] > 64 && str[i] < 91)
-		{
-			str[i] = str[i] + 32;
-		}
+		ptr[i] = min;
+		min++;
 		i++;
 	}
-	i = 0;
-	while (str[i] != '\0')
-	{
-		if ((str[i] > 31 && str[i] < 40) || (str[i] > 57 && str[i] < 65)) &&
-		 ((str[i + 1] > 96) && (str[i + 1] < 123))
-		{
-			str[i + 1] = str[i + 1] - 32;
-		}
-		i++;
-	}
-	return (str);
+	return (ptr);
 }

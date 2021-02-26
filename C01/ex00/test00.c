@@ -1,35 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test04.c                                           :+:      :+:    :+:   */
+/*   test00.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jjocher <jjocher@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/18 12:48:16 by jjocher           #+#    #+#             */
-/*   Updated: 2021/02/22 08:59:30 by jjocher          ###   ########.fr       */
+/*   Created: 2021/02/15 10:53:42 by jjocher           #+#    #+#             */
+/*   Updated: 2021/02/22 14:42:08 by jjocher          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-#include <stdio.h>
-#include <string.h>
 
-char	*ft_strstr(char *str, char *to_find);
+#include <stdio.h>
+
+void	ft_ft(int *nbr);
 
 int		main(void)
 {
-	char str[] = "Absolutley amazing!";
-	char to_find[] = "";
-	char str_2[] = "Absolutley amazing!";
-	char to_find_2[] = "";
-	char *pointer_1;
-	char *pointer_2;
+	int i;
 
-	printf("%s\n", str);
-	printf("%s\n", to_find);
-	pointer_1 = ft_strstr(str, to_find);
-	pointer_2 = strstr(str_2, to_find_2);
-	printf("%s\n", pointer_1);
-	printf("%s\n", pointer_2);
+	i = 732843247;
+	ft_ft(&i);
+	printf("%d", i);
 	return (0);
 }

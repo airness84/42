@@ -1,0 +1,7 @@
+void    print_hex(const char str)
+{
+    while(str != '\0')
+        printf("%02x:", (unsigned int) *str++);
+    printf("%02x:", (unsigned int) *str++);
+    printf("\n");
+}

@@ -1,35 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test04.c                                           :+:      :+:    :+:   */
+/*   test01.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jjocher <jjocher@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/18 12:48:16 by jjocher           #+#    #+#             */
-/*   Updated: 2021/02/22 08:59:30 by jjocher          ###   ########.fr       */
+/*   Created: 2021/02/24 23:07:41 by jjocher           #+#    #+#             */
+/*   Updated: 2021/02/25 19:49:28 by jjocher          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <stdio.h>
 #include <string.h>
+#include <stdio.h>
 
-char	*ft_strstr(char *str, char *to_find);
+int	*ft_range(int min, int max);
 
-int		main(void)
+int	main(void)
 {
-	char str[] = "Absolutley amazing!";
-	char to_find[] = "";
-	char str_2[] = "Absolutley amazing!";
-	char to_find_2[] = "";
-	char *pointer_1;
-	char *pointer_2;
+	int max;
+	int min;
+	int *array;
+	int i;
 
-	printf("%s\n", str);
-	printf("%s\n", to_find);
-	pointer_1 = ft_strstr(str, to_find);
-	pointer_2 = strstr(str_2, to_find_2);
-	printf("%s\n", pointer_1);
-	printf("%s\n", pointer_2);
+	//max = 2147483647;
+	//min = -2147483648;
+	min = -25;
+	max = 214;
+	array = ft_range(min, max);
+	i = 0;
+	while (min <= max)
+	{
+		printf("array[%d]: %d\n", i, array[i]);
+		min++;
+		i++;
+	}
+	printf("ft_range: %p\n", ft_range(min, max));
 	return (0);
 }
