@@ -1,0 +1,1 @@
+./a.out "this is a special arg"\: ';-)' use '\' "in order to write special characters" and '" " ' "in order to write longer arguments"
